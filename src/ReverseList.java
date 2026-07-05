@@ -17,16 +17,33 @@ public class ReverseList {
     }
     //main method
     public static void main(String[] args) {
-        Node head=new Node(10);
-        Node b=new Node(20);
-        Node c=new Node(30);
-        Node d=new Node(40);
-        Node e=new Node(50);
-        Node f=new Node(60);
+        // Creating a linked list: 1 -> 2 -> 3 -> 4 -> 5
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
 
+        Node newHead=reverseList(head);
+
+        // Printing the reversed list
+        while (newHead != null) {
+            System.out.print(newHead.val + " -> ");
+            newHead = newHead.next;
+        }
+        System.out.println();
     }
     //Reverse
-    public static void reverseList(Node head){
-
+    //TC- O(n) SC- O(1)
+    public static Node reverseList(Node head){
+        Node curr=head;
+        Node prev=null;
+        while(curr!=null){
+            Node temp=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=temp;
+        }
+        return prev;
     }
 }

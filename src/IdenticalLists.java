@@ -1,0 +1,2 @@
+public class IdenticalLists {
+}
