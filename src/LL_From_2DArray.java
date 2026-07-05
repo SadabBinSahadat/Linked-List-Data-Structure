@@ -55,6 +55,7 @@ public class LL_From_2DArray {
                 }
             }
         }
+        satisfyTail.next=unsatisfyHead;
         return dh;
     }
 }
