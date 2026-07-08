@@ -34,7 +34,7 @@ public class ReverseList {
         System.out.println();
     }
     //Reverse
-    //TC- O(n) SC- O(1)
+    //TC- O(n) SC- O(N)
     public static Node reverseList(Node head){
         if(head==null ||head.next==null)return head;
         Node newHead=reverseList(head.next);
