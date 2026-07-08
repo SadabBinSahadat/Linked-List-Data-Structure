@@ -36,14 +36,11 @@ public class ReverseList {
     //Reverse
     //TC- O(n) SC- O(1)
     public static Node reverseList(Node head){
-        Node curr=head;
-        Node prev=null;
-        while(curr!=null){
-            Node temp=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=temp;
+        if(head==null ||head.next==null)return head;
+        Node newHead=reverseList(head.next);
+        Node front=head.next;
+        front.next=head;
+        head.next=null;
+        return newHead;
         }
-        return prev;
-    }
 }
