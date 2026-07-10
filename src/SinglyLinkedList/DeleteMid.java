@@ -1,3 +1,5 @@
+package SinglyLinkedList;
+
 public class DeleteMid {
 
     public static class Node{

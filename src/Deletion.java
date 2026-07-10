@@ -24,6 +24,7 @@ public class Deletion {
         head=head.next;
         return head;
     }
+
     public Node deleteTail(){
         Node temp=head;
         while(temp.next.next!=null){
@@ -37,5 +38,9 @@ public class Deletion {
         node.next=head;
         head=node;
         return head;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

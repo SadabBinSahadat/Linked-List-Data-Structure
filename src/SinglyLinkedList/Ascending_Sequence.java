@@ -1,3 +1,5 @@
+package SinglyLinkedList;
+
 import java.util.*;
 public class Ascending_Sequence {
     public static class Node{
